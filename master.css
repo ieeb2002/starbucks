@@ -1,0 +1,127 @@
+body,
+div {
+  font-family : 'Quicksand',
+                sans-serif;
+}
+
+p {
+  display         : flex;
+  align-items     : center;
+  justify-content : flex-start;
+}
+
+.boton {
+  visibility : hidden;
+}
+
+/*! revisar mas datos aqui  https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas */
+
+#page {
+  display               : grid;
+  width                 : 100vw;
+  height                : 100vh;
+  margin                : 5px;
+  padding               : 0;
+  grid-column-gap       : 3px;
+  grid-row-gap          : 3px;
+  grid-template-columns : 20% 80%;
+  grid-template-rows    : 5rem auto 3rem;
+  grid-template-areas   : "nav head"
+                          "nav main"
+                          "nav foot";
+}
+
+#page > header {
+  display          : flex;
+  background-color : #219075;
+  align-items      : center;
+  justify-content  : space-around;
+  grid-area        : head;
+}
+
+#page > nav#nav_1 {
+  display          : flex;
+  background-color : #4671df;
+  align-items      : center;
+  flex-direction   : column;
+  justify-content  : center;
+  grid-area        : nav;
+}
+
+#page > main {
+  display          : flex;
+  background-color : #994435;
+  align-items      : center;
+  justify-content  : space-around;
+  grid-area        : main;
+}
+
+#page > footer {
+  display          : flex;
+  background-color : #1b9949;
+  align-items      : center;
+  justify-content  : space-around;
+  grid-area        : foot;
+}
+
+/*! aqui normalmente va lo del mobil y abajo dentro de la media Q va lo de escritorio, yo lo realize alrevez */
+
+@media
+  only screen
+  and (max-width : 500px) {
+  #page {
+    display               : grid;
+    width                 : 100vw;
+    height                : 100vh;
+    margin                : 5px;
+    padding               : 0;
+    grid-column-gap       : 3px;
+    grid-row-gap          : 3px;
+    grid-template-columns : 20% 80%;
+    grid-template-rows    : 10% 80% 10%;
+    grid-template-areas   : "head head"
+                            "main main"
+                            "foot foot";
+  }
+
+  #page > header {
+    display          : flex;
+    background-color : #273fb0;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : head;
+  }
+
+  #page > nav {
+    display          : flex;
+    margin           : 1px;
+    background-color : #ffa08c;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : nav;
+  }
+
+  #page > main {
+    display          : flex;
+    background-color : #32e243;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : main;
+  }
+
+  #page > footer {
+    display          : flex;
+    background-color : #c28cff;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : foot;
+  }
+
+  .boton {
+    display         : inline-flex;
+    visibility      : visible;
+    background      : #f47763;
+    justify-content : flex-end;
+    align-items     : center;
+  }
+}
