@@ -33,7 +33,7 @@ p {
 
 #page > header {
   display          : flex;
-  background-color : #8ca0ff;
+  background-color : #219075;
   align-items      : center;
   justify-content  : space-around;
   grid-area        : head;
@@ -41,7 +41,7 @@ p {
 
 #page > nav#nav_1 {
   display          : flex;
-  background-color : #ffa08c;
+  background-color : #4671df;
   align-items      : center;
   flex-direction   : column;
   justify-content  : center;
@@ -50,7 +50,7 @@ p {
 
 #page > main {
   display          : flex;
-  background-color : #ffff64;
+  background-color : #994435;
   align-items      : center;
   justify-content  : space-around;
   grid-area        : main;
@@ -58,7 +58,7 @@ p {
 
 #page > footer {
   display          : flex;
-  background-color : #8cffa0;
+  background-color : #1b9949;
   align-items      : center;
   justify-content  : space-around;
   grid-area        : foot;
